@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>All taks </h1>
+
+  <ul>
+    <% @tasks.each do |task| %>
+      <li ><i class="far <%= task.completed ? "fa-check-square" : "fa-square" %>"></i> - <%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+   <%= link_to 'New Task', new_task_path %>
+</div>
+<!-- <ul>
+  <% @tasks.each do |task| %>
+  <% end %>
+</ul>
+ -->
+
+
+
